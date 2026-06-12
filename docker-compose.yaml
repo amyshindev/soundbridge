@@ -34,7 +34,8 @@
     env_file:
       - .env
     environment:
-      DATABASE_URL: postgresql+psycopg://soundbridge:soundbridge@db:5432/soundbridge
+      # .env의 DATABASE_URL 사용 (Neon 등). 로컬 Postgres 컨테이너 쓸 때만 아래 주석 해제.
+      # DATABASE_URL: postgresql+psycopg://soundbridge:soundbridge@db:5432/soundbridge
       REDIS_URL: redis://redis:6379
     depends_on:
       db:
