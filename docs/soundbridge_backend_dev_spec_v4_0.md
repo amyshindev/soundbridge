@@ -2252,7 +2252,7 @@ httpx>=0.27.0
 # [MVP]
 DATABASE_URL=postgresql+psycopg://user:pwd@ep-xxx.neon.tech/soundbridge?sslmode=require
 REDIS_URL=redis://localhost:6379
-GEMINI_API_KEY=AIza...
+GEMINI_API_KEY=A...
 APP_ENV=development
 FRONTEND_URL=http://localhost:3000
 
