@@ -85,7 +85,7 @@ app/
 │       ├── track_repository.py
 │       ├── sample_repository.py
 │       ├── embedding_port.py
-│       └── gemini_port.py
+│       └── ollama_port.py
 └── use_cases/                      # 인터랙터 (비즈니스 흐름)
     ├── track_discover_interactor.py
     ├── sample_create_interactor.py
@@ -117,8 +117,7 @@ adapter/outbound/
 ├── external/
 │   ├── embedding_adapter.py      # Ollama nomic-embed-text (pgvector 검색)
 │   ├── ollama_llm_adapter.py     # EXAONE 매칭 설명
-│   ├── itunes_search_adapter.py  # DISCOVER 자동완성
-│   └── gemini_adapter.py         # (레거시/보조)
+│   └── itunes_search_adapter.py  # DISCOVER 자동완성
 ├── orm/                          # SQLAlchemy 모델
 │   ├── base_orm.py
 │   ├── track_orm.py              # gugak_tracks (+ TM 메타 컬럼)

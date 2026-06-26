@@ -16,9 +16,10 @@ app = "soundbridge-ollama"
      port = 443
      handlers = ["tls", "http"]
 
-[[vm]]
+[vm]
   memory = "4gb"
   cpus = 2
+  cpu_kind = "performance"
 
 [machine]
   auto_stop_machines = false
