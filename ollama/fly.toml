@@ -1,0 +1,16 @@
+app = "soundbridge-ollama"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[[services]]
+  internal_port = 11434
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 80
+    handlers = ["http"]
+
+[[vm]]
+  memory = "4gb"
+  cpus = 2
