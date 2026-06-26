@@ -7,10 +7,19 @@ app = "soundbridge-ollama"
   internal_port = 11434
   protocol = "tcp"
 
-  [[services.ports]]
-    port = 80
-    handlers = ["http"]
+     [[services.ports]]
+     port = 80
+     handlers = ["http"]
+     force_https = true
+
+     [[services.ports]]
+     port = 443
+     handlers = ["tls", "http"]
 
 [[vm]]
   memory = "4gb"
   cpus = 2
+
+[machine]
+  auto_stop_machines = false
+  auto_start_machines = true
