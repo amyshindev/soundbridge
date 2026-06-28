@@ -36,13 +36,10 @@ services:
     environment:
       # .env의 DATABASE_URL 사용 (Neon 등). 로컬 Postgres 컨테이너 쓸 때만 아래 주석 해제.
       # DATABASE_URL: postgresql+psycopg://soundbridge:soundbridge@db:5432/soundbridge
+      # Docker 네트워크 전용 — .env의 localhost 값을 덮어씀
       REDIS_URL: redis://redis:6379
       AUDIO_FILES_ROOT: /data/audio
-      EXAONE_API_KEY: flp_xxxxxx
-      EXAONE_BASE_URL: https://api.friendli.ai/serverless/v1
-      EXAONE_MODEL: LGAI-EXAONE/K-EXAONE-236B-A23B
-      EMBED_BASE_URL: http://host.docker.internal:11434
-      EMBED_MODEL: nomic-embed-text
+      # EXAONE_*, COHERE_*, EMBED_MODEL 등은 env_file(.env)에서 로드
     volumes:
       # 루트 .env에 AUDIO_FILES_HOST_PATH 설정 (기본: 로컬 국악음원 원천데이터)
       - ${AUDIO_FILES_HOST_PATH:-C:/Users/hi/Desktop/국악음원_sample/test/원천데이터}:/data/audio:ro

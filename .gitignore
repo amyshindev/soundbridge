@@ -52,3 +52,6 @@ desktop.ini
 uploads/
 media/
 staticfiles/
+
+# 일단 빼둠
+/README.md
