@@ -38,9 +38,11 @@ services:
       # DATABASE_URL: postgresql+psycopg://soundbridge:soundbridge@db:5432/soundbridge
       REDIS_URL: redis://redis:6379
       AUDIO_FILES_ROOT: /data/audio
-      OLLAMA_BASE_URL: http://host.docker.internal:11434
-      OLLAMA_EMBED_MODEL: nomic-embed-text
-      OLLAMA_CHAT_MODEL: exaone3.5:2.4b
+      EXAONE_API_KEY: flp_xxxxxx
+      EXAONE_BASE_URL: https://api.friendli.ai/serverless/v1
+      EXAONE_MODEL: LGAI-EXAONE/K-EXAONE-236B-A23B
+      EMBED_BASE_URL: http://host.docker.internal:11434
+      EMBED_MODEL: nomic-embed-text
     volumes:
       # 루트 .env에 AUDIO_FILES_HOST_PATH 설정 (기본: 로컬 국악음원 원천데이터)
       - ${AUDIO_FILES_HOST_PATH:-C:/Users/hi/Desktop/국악음원_sample/test/원천데이터}:/data/audio:ro
